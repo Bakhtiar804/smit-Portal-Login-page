@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="parent-flex">
+
+        <div class="header">
+            <div>
+                <img src="	https://lms.saylanimit.com/assets/logo.6lrMPvRL.png" alt="">
+            </div>
+            <div>
+                <p>Student Portal</p>
+            </div>
+        </div>
+        <div class="tab-container">
+            <input type="radio" id="tab-1" name="tabs" checked>
+            <label class="tab" for="tab-1" onclick="aganSwitch()">Login</label>
+
+            <input type="radio" id="tab-2" name="tabs">
+            <label class="tab" for="tab-2" onclick="classSwitch()">Create Account</label>
+
+            <div class="glider"></div>
+        </div>
+        <div class="container" id="container">
+            <div>
+                <h3 class="heading">Login</h3>
+                <p class="para">Kindly provide the CNIC number and password used during SMIT course registration.</p>
+            </div>
+            <div>
+                <div class="NIC-box">
+                    <label>CNIC *</label>
+                    <input id="login-nic" type="text">
+                </div>
+                <div class="Password-box">
+                    <label>Password *</label>
+                    <input id="login-password" type="text">
+                </div>
+            </div>
+            <div>
+                <button onclick="loginAccount()">Login</button>
+            </div>
+        </div>
+         <div class="create-container" id="create-container">
+            <div>
+                <h3 class="heading">Create a Account</h3>
+                <p class="para">Kindly provide the CNIC number and phone number used during SMIT course registration.</p>
+            </div>
+            <div>
+                <div class="NIC-box">
+                    <label>CNIC *</label>
+                    <input id="create-nic" type="text">
+                </div>
+                <div class="Password-box">
+                    <label>Phone Number *</label>
+                    <input id="create-number" type="number">
+                </div>
+                <div class="Password-box">
+                    <label>Password *</label>
+                    <input id="create-password" type="text">
+                </div>
+            </div>
+            <div>
+                <button onblur="inputWork()" onclick="submit()" >Create Account</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
