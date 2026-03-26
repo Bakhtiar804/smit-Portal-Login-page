@@ -7,6 +7,9 @@ function classSwitch() {
     login.style.display = "none";
     create.style.display = "block";
 
+
+    document.getElementById("tab-1").checked = true;
+
 }
 
 function aganSwitch() {
@@ -16,6 +19,9 @@ function aganSwitch() {
 
     create.style.display = "none";
     login.style.display = "block";
+
+
+    document.getElementById("tab-1").checked = true;
 
 }
 
