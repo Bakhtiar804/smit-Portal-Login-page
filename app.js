@@ -28,27 +28,34 @@ function submit() {
     var valueOfPhone = phoneInputValue.value.trim()
     var valueOfPass = passwordInputValue.value.trim()
 
+    var hasError = false;
+
     if (valueOfNic === '') {
-       var redAlert_1 = document.getElementById('create-nic')
+     var redAlert_1 = document.getElementById('create-nic')
      redAlert_1.setAttribute("class" , 'inputEmpty')
      redAlert_1.placeholder = "⚠️ Field cannot be empty!";
      redAlert_1.style.backgroundColor = "#ffe6e6";
-       
+       hasError = true;
     }
-     if(valueOfPhone == ''){
-var redAlert_2 = document.getElementById('create-number')
+    if(valueOfPhone === ''){
+     var redAlert_2 = document.getElementById('create-number')
      redAlert_2.setAttribute("class" , 'inputEmpty')
      redAlert_2.placeholder = "⚠️ Field cannot be empty!";
      redAlert_2.style.backgroundColor = "#ffe6e6";
+     hasError = true;
     }
-    if(valueOfPass == ''){
-        var redAlert_3 = document.getElementById('create-password')
+     if(valueOfPass === ''){
+     var redAlert_3 = document.getElementById('create-password')
      redAlert_3.setAttribute("class" , 'inputEmpty')
      redAlert_3.placeholder = "⚠️ Field cannot be empty!";
      redAlert_3.style.backgroundColor = "#ffe6e6";
+     hasError = true;
     }
 
-    
+    if(hasError){
+        return;
+    }
+
 
    createAccount()
 
@@ -58,22 +65,16 @@ var redAlert_2 = document.getElementById('create-number')
 function inputWork(){
     var redAlert_1 = document.getElementById('create-nic')
     redAlert_1.removeAttribute("class" , 'inputEmpty');
-
-    redAlert_1.placeholder = 'Add Your Tasks'
     redAlert_1.style.backgroundColor = "rgb(255, 255, 255)";
 
 
     var redAlert_2 = document.getElementById('create-password')
     redAlert_2.removeAttribute("class" , 'inputEmpty');
-
-    redAlert_2.placeholder = 'Add Your Tasks'
     redAlert_2.style.backgroundColor = "rgb(255, 255, 255)";
 
 
     var redAlert_3 = document.getElementById('create-number')
     redAlert_3.removeAttribute("class" , 'inputEmpty');
-
-    redAlert_3.placeholder = 'Add Your Tasks'
     redAlert_3.style.backgroundColor = "rgb(255, 255, 255)";
 
 
@@ -87,9 +88,6 @@ function createAccount() {
     var createPhoneNumber = document.getElementById('create-number');
     var createPassword = document.getElementById('create-password');
 
-    if(createNic.value == '' || createPhoneNumber == '' || createPassword == ''){
-        return;
-    }
 
     var users = {
         origNic: createNic.value,
@@ -147,28 +145,3 @@ function loginAccount() {
 
 
 
-// function loginAccount() {
-//     var loginNic = document.getElementById('login-nic').value;
-//     var loginPassword = document.getElementById('login-password').value;
-
-//     // We create a variable to track if we found a match
-//     var isFound = false;
-
-//     // Loop through every object in the array
-//     for (var i = 0; i < usersArray.length; i++) {
-//         var user = usersArray[i];
-
-//         // Check if the current user in the loop matches the input
-//         if (loginNic === user.origNic && loginPassword === user.origPassword) {
-//             isFound = true;
-//             break; // Stop the loop early because we found them!
-//         }
-//     }
-
-//     // After the loop finishes, check our "tracker" variable
-//     if (isFound) {
-//         alert('You have logged in successfully!');
-//     } else {
-//         alert('Input credentials not matched');
-//     }
-// }

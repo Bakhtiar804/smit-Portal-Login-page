@@ -177,3 +177,65 @@ button:hover {
     background-color: #0A2B70;
     border: 1px solid #0A2B70;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query for Mobile Devices (425px and below) */
+@media screen and (max-width: 425px) {
+    
+    body {
+        padding-top: 20px; /* Reduce top padding for smaller screens */
+    }
+
+    /* Adjust the main card containers */
+    .container, 
+    .create-container {
+        width: 95%; /* Occupy most of the screen width */
+        padding: 15px; /* Reduce internal spacing */
+        margin: 10px auto;
+    }
+
+    /* Make input boxes and buttons fill their parent container */
+    .NIC-box, 
+    .Password-box, 
+    button {
+        width: 100% !important; /* Forces elements to fit the 95% container */
+    }
+
+    /* Adjust the Tab Switcher */
+    .tab-container {
+        width: 95%; /* Make the pill-shaped tab switcher wider */
+        display: flex;
+    }
+
+    .tab {
+        flex: 1; /* Ensure both tabs take equal space */
+        padding: 10px 10px;
+        min-width: 0; /* Override the desktop min-width */
+        font-size: 14px; /* Slightly smaller text for mobile */
+    }
+
+    .glider {
+        width: 50%; /* Glider should be half of the 100% container */
+    }
+
+    /* Adjusting the logo size for mobile */
+    img {
+        height: 60px;
+        width: auto;
+    }
+    
+    .para {
+        font-size: 13px; /* Smaller text for better readability */
+    }
+}
