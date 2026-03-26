@@ -1,181 +1,182 @@
+
 :root {
-            --bg-color: #f5f5f5; /* Light grey background */
-            --active-bg: #ffffff; /* White active tab */
-            --text-color: #4a76a8; /* Blueish text from image */
-            --transition-speed: 0.3s;
-        }
+    --bg-color: #f5f5f5; /* Light grey background */
+    --active-bg: #ffffff; /* White active tab */
+    --text-color: #4a76a8; /* Blueish text from image */
+    --transition-speed: 0.3s;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            padding-top: 50px;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
 
-        /* The Outer Pill Container */
-        .tab-container {
-            display: flex;
-            background-color: var(--bg-color);
-            padding: 4px;
-            border-radius: 12px;
-            position: relative;
-            width: fit-content;
-            border: 1px solid #e0e0e0;
-        }
+/* The Outer Pill Container */
+.tab-container {
+    display: flex;
+    background-color: var(--bg-color);
+    padding: 4px;
+    border-radius: 12px;
+    position: relative;
+    width: fit-content;
+    border: 1px solid #e0e0e0;
+}
 
-        /* Individual Tab Styling */
-        .tab {
-            padding: 10px 40px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--text-color);
-            border-radius: 8px;
-            transition: color var(--transition-speed);
-            z-index: 2;
-            text-align: center;
-            min-width: 120px;
-        }
+/* Individual Tab Styling */
+.tab {
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: color var(--transition-speed);
+    z-index: 2;
+    text-align: center;
+    min-width: 120px;
+}
 
-        /* The Sliding Background */
-        .glider {
-            position: absolute;
-            height: calc(100% - 8px);
-            width: 150px; /* Should match tab width */
-            background-color: var(--active-bg);
-            z-index: 1;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform var(--transition-speed) ease-in-out;
-        }
+/* The Sliding Background */
+.glider {
+    position: absolute;
+    height: calc(100% - 8px);
+    width: 150px; /* Should match tab width */
+    background-color: var(--active-bg);
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform var(--transition-speed) ease-in-out;
+}
 
-        /* Logic for switching (CSS handles the movement) */
-        #tab-1:checked ~ .glider { transform: translateX(0); }
-        #tab-2:checked ~ .glider { transform: translateX(100%); }
+/* Logic for switching (CSS handles the movement) */
+#tab-1:checked ~ .glider { transform: translateX(0); }
+#tab-2:checked ~ .glider { transform: translateX(100%); }
 
-        /* Hide Radio Buttons */
-        input[type="radio"] { display: none; }
+/* Hide Radio Buttons */
+input[type="radio"] { display: none; }
 
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
 }
 
 .parent-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
 .create-container{
-        border: 1px solid #d6d6d6;
-    box-shadow: 0.5px 0.5px 8px #ececec;
-    border-radius: 10px;
-    width: 410px;
-    padding: 25px;
-    margin-top: 10px;
+border: 1px solid #d6d6d6;
+box-shadow: 0.5px 0.5px 8px #ececec;
+border-radius: 10px;
+width: 410px;
+padding: 25px;
+margin-top: 10px;
 }
 
 #create-container{
-    display: none;
+display: none;
 }
 
 .container {
-    border: 1px solid #d6d6d6;
-    box-shadow: 0.5px 0.5px 8px #ececec;
-    border-radius: 10px;
-    width: 410px;
-    padding: 25px;
-    margin-top: 10px;
-    display: hidden;
+border: 1px solid #d6d6d6;
+box-shadow: 0.5px 0.5px 8px #ececec;
+border-radius: 10px;
+width: 410px;
+padding: 25px;
+margin-top: 10px;
+display: hidden;
 }
 
 img{
-    height: 80px;
-    width: 120px;
+height: 80px;
+width: 120px;
 }
 
 p{
-    font-size: 18px;
-    font-weight: 450;
-    margin-bottom: 20px;
-    
+font-size: 18px;
+font-weight: 450;
+margin-bottom: 20px;
+
 }
 
 .header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
 .heading {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 5px;
 }
 
 .para {
-    font-size: 15px;
-    color: #737373;
+font-size: 15px;
+color: #737373;
 }
 
 .NIC-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 25px;
-    width: 360px;
-    font-weight: 400;
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin-top: 25px;
+width: 360px;
+font-weight: 400;
 }
 
 .Password-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    width: 360px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin-top: 15px;
+margin-bottom: 10px;
+width: 360px;
 
 
 }
 
 label {
-    font-weight: 450;
-    font-size: 15px;
+font-weight: 450;
+font-size: 15px;
 }
 
 input {
-    border-radius: 4px;
-    border: 1px solid #737373;
-    margin: 4px;
-    margin-left: 0px;
-    height: 30px;
-    box-shadow: 0.5px 0.5px 6px #ececec;
-    padding: 5px;
+border-radius: 4px;
+border: 1px solid #737373;
+margin: 4px;
+margin-left: 0px;
+height: 30px;
+box-shadow: 0.5px 0.5px 6px #ececec;
+padding: 5px;
 }
 
 button {
-    width: 360px;
-    background-color: #1b46a1;
-    color: #FAFAFA;
-    font-size: 17px;
-    font-weight: 600;
-    border: 1px solid #1b46a1;
-    border-radius: 5px;
-    box-shadow: 0.5px 0.5px 6px #d2dfff;
-    height: 33px;
-    margin-top: 11px;
-    margin-bottom: 13px;
-    cursor: pointer;
+width: 360px;
+background-color: #1b46a1;
+color: #FAFAFA;
+font-size: 17px;
+font-weight: 600;
+border: 1px solid #1b46a1;
+border-radius: 5px;
+box-shadow: 0.5px 0.5px 6px #d2dfff;
+height: 33px;
+margin-top: 11px;
+margin-bottom: 13px;
+cursor: pointer;
 }
 
 button:hover {
-    background-color: #0A2B70;
-    border: 1px solid #0A2B70;
+background-color: #0A2B70;
+border: 1px solid #0A2B70;
 }
 
 
@@ -192,50 +193,50 @@ button:hover {
 
 /* Media Query for Mobile Devices (425px and below) */
 @media screen and (max-width: 425px) {
-    
-    body {
-        padding-top: 20px; /* Reduce top padding for smaller screens */
-    }
 
-    /* Adjust the main card containers */
-    .container, 
-    .create-container {
-        width: 95%; /* Occupy most of the screen width */
-        padding: 15px; /* Reduce internal spacing */
-        margin: 10px auto;
-    }
+body {
+padding-top: 20px; /* Reduce top padding for smaller screens */
+}
 
-    /* Make input boxes and buttons fill their parent container */
-    .NIC-box, 
-    .Password-box, 
-    button {
-        width: 100% !important; /* Forces elements to fit the 95% container */
-    }
+/* Adjust the main card containers */
+.container, 
+.create-container {
+width: 95%; /* Occupy most of the screen width */
+padding: 15px; /* Reduce internal spacing */
+margin: 10px auto;
+}
 
-    /* Adjust the Tab Switcher */
-    .tab-container {
-        width: 95%; /* Make the pill-shaped tab switcher wider */
-        display: flex;
-    }
+/* Make input boxes and buttons fill their parent container */
+.NIC-box, 
+.Password-box, 
+button {
+width: 100% !important; /* Forces elements to fit the 95% container */
+}
 
-    .tab {
-        flex: 1; /* Ensure both tabs take equal space */
-        padding: 10px 10px;
-        min-width: 0; /* Override the desktop min-width */
-        font-size: 14px; /* Slightly smaller text for mobile */
-    }
+/* Adjust the Tab Switcher */
+.tab-container {
+width: 95%; /* Make the pill-shaped tab switcher wider */
+display: flex;
+}
 
-    .glider {
-        width: 50%; /* Glider should be half of the 100% container */
-    }
+.tab {
+flex: 1; /* Ensure both tabs take equal space */
+padding: 10px 10px;
+min-width: 0; /* Override the desktop min-width */
+font-size: 14px; /* Slightly smaller text for mobile */
+}
 
-    /* Adjusting the logo size for mobile */
-    img {
-        height: 60px;
-        width: auto;
-    }
-    
-    .para {
-        font-size: 13px; /* Smaller text for better readability */
-    }
+.glider {
+width: 50%; /* Glider should be half of the 100% container */
+}
+
+/* Adjusting the logo size for mobile */
+img {
+height: 60px;
+width: auto;
+}
+
+.para {
+font-size: 13px; /* Smaller text for better readability */
+}
 }
