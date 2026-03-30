@@ -1,4 +1,3 @@
-
 function classSwitch() {
 
     var login = document.getElementById("container");
@@ -7,8 +6,7 @@ function classSwitch() {
     login.style.display = "none";
     create.style.display = "block";
 
-
-    document.getElementById("tab-1").checked = true;
+      document.getElementById("tab-1").checked = true;
 
 }
 
@@ -20,8 +18,7 @@ function aganSwitch() {
     create.style.display = "none";
     login.style.display = "block";
 
-
-    document.getElementById("tab-1").checked = true;
+       document.getElementById("tab-1").checked = true;
 
 }
 
@@ -38,60 +35,56 @@ function submit() {
     var hasError = false;
 
     if (valueOfNic === '') {
-        var redAlert_1 = document.getElementById('create-nic')
-        redAlert_1.setAttribute("class", 'inputEmpty')
-        redAlert_1.placeholder = "⚠️ Field cannot be empty!";
-        redAlert_1.style.backgroundColor = "#ffe6e6";
-        hasError = true;
+     var redAlert_1 = document.getElementById('create-nic')
+     redAlert_1.setAttribute("class" , 'inputEmpty')
+     redAlert_1.placeholder = "⚠️ Field cannot be empty!";
+     redAlert_1.style.backgroundColor = "#ffe6e6";
+       hasError = true;
     }
-    if (valueOfPhone === '') {
-        var redAlert_2 = document.getElementById('create-number')
-        redAlert_2.setAttribute("class", 'inputEmpty')
-        redAlert_2.placeholder = "⚠️ Field cannot be empty!";
-        redAlert_2.style.backgroundColor = "#ffe6e6";
-        hasError = true;
+    if(valueOfPhone === ''){
+     var redAlert_2 = document.getElementById('create-number')
+     redAlert_2.setAttribute("class" , 'inputEmpty')
+     redAlert_2.placeholder = "⚠️ Field cannot be empty!";
+     redAlert_2.style.backgroundColor = "#ffe6e6";
+     hasError = true;
     }
-    if (valueOfPass === '') {
-        var redAlert_3 = document.getElementById('create-password')
-        redAlert_3.setAttribute("class", 'inputEmpty')
-        redAlert_3.placeholder = "⚠️ Field cannot be empty!";
-        redAlert_3.style.backgroundColor = "#ffe6e6";
-        hasError = true;
+     if(valueOfPass === ''){
+     var redAlert_3 = document.getElementById('create-password')
+     redAlert_3.setAttribute("class" , 'inputEmpty')
+     redAlert_3.placeholder = "⚠️ Field cannot be empty!";
+     redAlert_3.style.backgroundColor = "#ffe6e6";
+     hasError = true;
     }
 
-    if (hasError) {
+    if(hasError){
         return;
     }
 
 
-    createAccount()
+   createAccount()
 
 
 }
 
-function inputWork() {
+function inputWork(){
     var redAlert_1 = document.getElementById('create-nic')
-    redAlert_1.removeAttribute("class", 'inputEmpty');
+    redAlert_1.removeAttribute("class" , 'inputEmpty');
     redAlert_1.style.backgroundColor = "rgb(255, 255, 255)";
 
 
     var redAlert_2 = document.getElementById('create-password')
-    redAlert_2.removeAttribute("class", 'inputEmpty');
+    redAlert_2.removeAttribute("class" , 'inputEmpty');
     redAlert_2.style.backgroundColor = "rgb(255, 255, 255)";
 
 
     var redAlert_3 = document.getElementById('create-number')
-    redAlert_3.removeAttribute("class", 'inputEmpty');
+    redAlert_3.removeAttribute("class" , 'inputEmpty');
     redAlert_3.style.backgroundColor = "rgb(255, 255, 255)";
 
 
 }
 
-var usersArray = JSON.parse(localStorage.getItem("usersArray")) || [];
-
-console.log(usersArray)
-
-
+var usersArray = [];
 
 function createAccount() {
 
@@ -108,12 +101,10 @@ function createAccount() {
 
     usersArray.push(users)
 
-    localStorage.setItem('usersArray', JSON.stringify(usersArray));
-    
     createNic.value = '';
     createPhoneNumber.value = '';
     createPassword.value = '';
-    
+
     console.log(usersArray)
     aganSwitch()
     return;
